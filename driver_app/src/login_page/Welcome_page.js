@@ -18,16 +18,16 @@ class WelcomePage extends Component {
                         <span>Edukacyjna aplikacja samochodowa</span>
                     </div>
                 </div>
-                <div className="row signin-row">
+                <div className="row login-link-row">
                     <Link to='/login'>
-                        <div className="col-4 signin-col">
+                        <div className="col-4 login-link-col">
                             <span>Zaloguj się</span>
                         </div>
                     </Link>
                 </div>
-                <div className="row signup-row">
-                    <Link to='/signin'>
-                        <div className="col-4 signup-col">
+                <div className="row signup-link-row">
+                    <Link to='/signup'>
+                        <div className="col-4 signup-link-col">
                             <span>Zarejestruj się</span> 
                         </div>
                     </Link>

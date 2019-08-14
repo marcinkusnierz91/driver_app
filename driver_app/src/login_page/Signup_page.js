@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import Login from './Login'
 
 
+import Signup from './Signup';
 
 
-class LoginPage extends Component {
+class SignupPage extends Component {
     
     
     render() {
@@ -21,13 +21,14 @@ class LoginPage extends Component {
                         <span>Edukacyjna aplikacja samochodowa</span>
                     </div>
                 </div>
-                <div className="row login-row">
-                    <div className="col-6 login-col">
-                        <h2>Zaloguj się</h2>
-                        <Login/>
+                
+                <div className="row signup-row">
+                    <div className="col-6 signup-col">
+                        <h2>Zarejestruj się</h2>
+                        <Signup/>
                     </div>
                 </div>
-                
+
                 
                 
                 
@@ -36,4 +37,4 @@ class LoginPage extends Component {
     }
 }
 
-export default LoginPage;
+export default SignupPage;
