@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import DriverLogo from './Driver_logo';
 
 
 
@@ -8,16 +9,7 @@ class WelcomePage extends Component {
 
         return(
             <section className='grid-container loginContainer'>
-                <div className="row title-row">
-                    <div className="col-7 title-col">
-                        <span>Driver</span>
-                    </div>
-                </div>
-                <div className="row description-row">
-                    <div className="col-7 description-col">
-                        <span>Edukacyjna aplikacja samochodowa</span>
-                    </div>
-                </div>
+                <DriverLogo/>
                 <div className="row login-link-row">
                     <Link to='/login'>
                         <div className="col-4 login-link-col">

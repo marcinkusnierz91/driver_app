@@ -42,7 +42,7 @@
             height:1.5em;
             border: 2px solid #eeeeee;
             border-radius: 10px;
-            margin-top:-28px;
+            margin-top:-23px;
             padding: 0;
             span {
                 color: #eeeeee;
@@ -61,9 +61,12 @@
             border: 2px solid #eeeeee;
             border-radius: 5px;
             margin-top:5px;
+            -webkit-tap-highlight-color: transparent;
             span {
                 color: #eeeeee;
                 font-family: $main-font;
+                -webkit-tap-highlight-color: transparent;
+                
             }
         }
     }
@@ -107,7 +110,7 @@
         &::before {
             position: absolute;
             width: 200px;
-            height: 440px;
+            height: 430px;
             background: rgba(0, 0, 0, 0.3);
             border-radius: 5px;
 

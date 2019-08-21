@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-
+import {connect} from 'react-redux';
 
 
 const styles = theme => ({
@@ -28,21 +28,25 @@ const styles = theme => ({
     cssOutlinedInput: {
       '&$cssFocused' : {
         borderColor: `#eeeeee !important`,
-        color:'#eeeeee !important'
+        color:'#eeeeee !important',
+        
       },
-      color:'#eeeeee !important'
+      color:'#eeeeee !important',
+      
     },
   
     cssFocused: {
       "& $notchedOutline $cssOutlinedInput": {
+        button:'focus {outline:0;}',
         borderColor: "#eeeeee",
         color:'#eeeeee !important'
       },
-      color:'#eeeeee !important'
+      color:'#eeeeee !important',
+      
     },
   
     notchedOutline: {
-        
+      
       borderWidth: '2px',
       borderColor: '#eeeeee !important',
     },
@@ -61,14 +65,31 @@ const styles = theme => ({
     }
   
     handleChange = event => {
+        event.preventDefault();
         this.setState({
         [event.target.name]: event.target.value,
       });
     };
-  
+
+    // onChangeName = () => {
+    //   this.props.onChange(this.state.email)
+    //   // console.log(this.state.email)
+    // }
+
     render() {
+      
       const { classes } = this.props;
-  
+      const { accounts } = this.props;
+      // const passwordArray = accounts.map(account => account.password);
+      // const emailArray = accounts.map(account => account.email )
+      const password = accounts.map(account => account.password)
+      const email = accounts.map(account => account.email)
+      let link;
+      if (this.state.email.match(email) && this.state.password.match(password)) {
+        link = '/logged/'
+      } else {
+        link = '/login';
+      }
       return (
         <Container component="main" maxWidth="xs">
             <div className={classes.paper}>
@@ -77,7 +98,7 @@ const styles = theme => ({
                     <Grid item xs={12} >
                     <TextField
                         id="outlined-email-input"
-                        label="Email"
+                        label="Email *"
                         type='email'
                         name='email'
                         autoComplete='email'
@@ -104,11 +125,11 @@ const styles = theme => ({
                     />
                     
                     </Grid>
-                    <Grid item xs={12} sm={6}>
+                    <Grid item xs={12}>
                     
                     <TextField
                     id="outlined-password-input"
-                    label="Hasło"
+                    label="Hasło *"
                     type='password'
                     name='password'
                     autoComplete='current-password'
@@ -136,9 +157,9 @@ const styles = theme => ({
                     </Grid>
                 </Grid> 
                 <div className="row btn-row">
-                    <Link to='/logged/'>
-                        <div className="col-4 btn-col">
-                            <span>W drogę!</span>
+                    <Link to={link}>
+                        <div onClick={this.onChangeName} className="col-4 btn-col">
+                            <span>W drogę !</span>
                         </div>
                     </Link>
                 </div>
@@ -149,5 +170,12 @@ const styles = theme => ({
       );
     }
   }
+
+const validation = (state) => {
+  return {
+    accounts: state.accounts
+  }
+}
+
   
-  export default withStyles(styles)(ValidField);
+  export default connect(validation)(withStyles(styles)(ValidField));

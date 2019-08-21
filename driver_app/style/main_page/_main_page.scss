@@ -1,0 +1,58 @@
+.mainContainer {
+    text-align: center;
+    background-image: url(../../src/images/mark-cruz-Qg4riM5TQiI-unsplash.jpg) ;
+    background-size: cover; 
+    height: 100vh;
+    
+    .logged-logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .title-col {
+            display: flex;
+            justify-content: center;
+            span {
+                font-family: $title-font;
+                color: #eeeeee;
+                display: inline-block;
+                font-size: 200%;
+                padding:0;
+            }
+        }
+    
+        .description-row {
+            .description-col {
+                width: 99%;
+                height:1em;
+                border: 2px solid #eeeeee;
+                border-radius: 10px;
+                margin-top:-17px;
+                padding: 0.5px;
+                display: flex;
+                justify-content: center;
+                margin-left:6px;
+                span {
+                    color: #eeeeee;
+                    font-family: $main-font;
+                    font-size: 7.5px; 
+                }
+            }
+        }
+    }
+
+    .logged-name {
+        // font-family: $title-font;
+        .hello-col {
+            margin: 6px 0 -10px 0;
+        }
+
+        span {
+            overflow-wrap: break-word;
+            font-family: $main-font;
+            color: #eeeeee;
+            font-size: 90%;
+            margin-top:7px;
+        }
+    }
+
+}
