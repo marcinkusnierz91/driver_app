@@ -65,7 +65,7 @@ const styles = theme => ({
     }
   
     handleChange = event => {
-        event.preventDefault();
+        // event.preventDefault();
         this.setState({
         [event.target.name]: event.target.value,
       });
@@ -171,11 +171,11 @@ const styles = theme => ({
     }
   }
 
-const validation = (state) => {
+const mapStateToProps = (state) => {
   return {
     accounts: state.accounts
   }
 }
 
   
-  export default connect(validation)(withStyles(styles)(ValidField));
+  export default connect(mapStateToProps)(withStyles(styles)(ValidField));

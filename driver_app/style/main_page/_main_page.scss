@@ -1,6 +1,6 @@
 .mainContainer {
     text-align: center;
-    background-image: url(../../src/images/mark-cruz-Qg4riM5TQiI-unsplash.jpg) ;
+    background-color: black;
     background-size: cover; 
     height: 100vh;
     
@@ -52,6 +52,64 @@
             color: #eeeeee;
             font-size: 90%;
             margin-top:7px;
+        }
+    }
+
+    .weekly-advice__row {
+        display: flex;
+        justify-content: center;
+        margin-top:20px;
+        .weekly-advice__col {
+            background-color: aqua;
+            height: 10em;
+            border-radius: 10px;
+            h2, h3 {
+                font-family: $main-font;
+                color: #eeeeee;
+                font-weight: 400;
+                text-align: start;
+            }
+
+        }
+    }
+
+    .nav-row {
+        display: flex;
+        justify-content: center;
+        margin-top:20px;
+        .nav-col {
+            display: flex;
+            justify-content: space-between;
+            span {
+                color: #eeeeee;
+                font-family: $main-font;
+                font-size: 18px;
+                position: relative;
+                &:hover::after {
+                    content: "";
+                    display: block;
+                    width: 101%;
+                    height: 4px;
+                    background-color: aqua;
+                    position: absolute;
+                    top: 28px;
+                    right: -1px;
+                }
+                
+            }
+        }
+    }
+
+    .advices-col {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        .advice {
+            height: 130px;
+            background-color: aqua;
+            margin-top:20px;
+            border-radius: 10px;
         }
     }
 
