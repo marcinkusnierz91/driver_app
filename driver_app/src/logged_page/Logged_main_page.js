@@ -2,12 +2,20 @@ import React, {Component} from 'react';
 import DriverLogo from '../login_page/Driver_logo';
 import Name from './Name';
 import {connect} from 'react-redux';
+import LoggedAdvices from './Logged_advices';
+import LoggedQuiz from './Logged_quiz';
+
+
+
+
+
 
 
 class LoggedMainPage extends Component {
     
     state = {
         email: '',
+        page: 1,
     }
 
     onChangeName = email => {
@@ -16,9 +24,35 @@ class LoggedMainPage extends Component {
         });
     }
     
+    handlePage1 = () => {
+        this.setState({
+            page: 1,
+        })
+        
+    }
+    handlePage2 = () => {
+        this.setState({
+            page: 2,
+        })
+    }
+    handlePage3 = () => {
+        this.setState({
+            page: 3,
+        }) 
+    }
+
     render() {
         const { accounts } = this.props;
-        const name = accounts.map(name => name.name)
+        const name = accounts.map(name => name.name);
+        let page;
+        let style;
+        if(this.state.page == 1) {
+            page = <LoggedAdvices/>;
+        } else if (this.state.page == 2) {
+            page = <LoggedQuiz/>
+        } else if (this.state.page == 3) {
+            page = null
+        }
 
         return (
             <section className='grid-container mainContainer'>
@@ -53,36 +87,20 @@ class LoggedMainPage extends Component {
 
                 <nav className="row nav-row">
                     <div className="col-9 nav-col">
-                        <div className="col-3">
+                        <div className="col-3" onClick={this.handlePage1}>
                             <span>Porady</span>
                         </div>
-                        <div className="col-3">
+                        <div className="col-3" onClick={this.handlePage2}>
                             <span>Quiz</span>
                         </div>
-                        <div className="col-3">
+                        <div className="col-3" onClick={this.handlePage3}>
                             <span>FAQ</span>
                         </div>
                     </div>
                 </nav>
 
-                <div className="row ">
-                    <div className="col-5 advices-col">
-                        <div className="col-4 advice">
-
-                        </div>
-                        <div className="col-4 advice">
-
-                        </div>
-                    </div>
-                    <div className="col-5 advices-col">
-                        <div className="col-4 advice">
-
-                        </div>
-                        <div className="col-4 advice">
-
-                        </div>
-                    </div>
-                </div>
+                {page}
+                
                 
                 
                 

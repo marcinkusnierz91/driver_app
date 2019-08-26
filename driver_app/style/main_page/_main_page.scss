@@ -60,14 +60,28 @@
         justify-content: center;
         margin-top:20px;
         .weekly-advice__col {
-            background-color: aqua;
+            background:linear-gradient(
+                rgba(0, 0, 0, 0.3), 
+                rgba(0, 0, 0, 0.3)
+              ), url('../../src/images/prowad_na_zakr.jpg');
+            background-size: cover;
             height: 10em;
             border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+            
             h2, h3 {
                 font-family: $main-font;
-                color: #eeeeee;
                 font-weight: 400;
                 text-align: start;
+            }
+            h2 {
+                color: white;
+            }
+            h3 {
+                color: #eeeeee;
             }
 
         }
@@ -99,18 +113,67 @@
             }
         }
     }
-
-    .advices-col {
+    .advices-row {
         display: flex;
-        flex-direction: column;
-        // justify-content: center;
-        align-items: center;
-        .advice {
-            height: 130px;
-            background-color: aqua;
-            margin-top:20px;
-            border-radius: 10px;
+        justify-content: center;
+        max-height: 310px; 
+        .advices-col {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+            .advice {
+
+                padding:10px;
+                height: 130px;
+                margin-top:20px;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                text-align: left;
+                position:relative;
+                
+                h3 {
+                    color: white;
+                    font-family: $main-font;
+                    font-weight: 500;
+                }
+    
+                h5 {
+                    color: #eeeeee;
+                    font-family: $main-font;
+                    font-weight: 500;
+                }
+            }
         }
     }
+    
+    .quiz-row {
+        margin-top:20px;
+        display: flex;
+        justify-content: center;
+        .quiz-col {
+            background:linear-gradient(
+                rgba(0, 0, 0, 0.3), 
+                rgba(0, 0, 0, 0.3) ), 
+                url('../../src/images/prace.jpg');
+            background-size: cover;
+            height: 19em;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2 {
+                font-family: $main-font;
+                color: #eeeeee;
+            }
+
+        }
+        
+    }
+    
+    
 
 }

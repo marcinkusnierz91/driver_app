@@ -1,0 +1,21 @@
+$images: (
+    imege1: url(../src/images/zasady_ruchu_drog.jpg),
+    image2: url(../src/images/znaki.jpg),
+    imege3: url(../src/images/techniki_hamowania.jpg),
+    imege4: url(../src/images/bezpieczna_jazda.jpg),
+);
+
+$images-list: map-values($images);
+
+@for $i from 1 through length($images-list) {
+    .advice:nth-of-type(#{$i}) {
+        background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.3), 
+            rgba(0, 0, 0, 0.3)
+          ), 
+          nth($images-list,$i);
+        background-size: cover;
+        
+    }
+}
