@@ -63,7 +63,8 @@
             background:linear-gradient(
                 rgba(0, 0, 0, 0.3), 
                 rgba(0, 0, 0, 0.3)
-              ), url('../../src/images/prowad_na_zakr.jpg');
+              ),
+              url('../../src/images/prowad_na_zakr.jpg');
             background-size: cover;
             height: 10em;
             border-radius: 10px;
@@ -123,7 +124,7 @@
             flex-wrap: wrap;
             
             .advice {
-
+                text-decoration: none;
                 padding:10px;
                 height: 130px;
                 margin-top:20px;
@@ -134,7 +135,6 @@
                 align-items: flex-start;
                 text-align: left;
                 position:relative;
-                
                 h3 {
                     color: white;
                     font-family: $main-font;
@@ -160,7 +160,7 @@
                 rgba(0, 0, 0, 0.3) ), 
                 url('../../src/images/prace.jpg');
             background-size: cover;
-            height: 19em;
+            height: 18em;
             border-radius: 10px;
             display: flex;
             justify-content: center;
@@ -168,12 +168,92 @@
             h2 {
                 font-family: $main-font;
                 color: #eeeeee;
+                font-weight: 400;
             }
 
         }
         
     }
-    
-    
+
+    .advice-title__col {
+        display: flex;
+        justify-content: center;
+        margin-top:10px;
+        h3 {
+            font-family: $main-font;
+            color: #eeeeee;
+            font-size: 24px;
+            font-weight: 500;
+        }
+    }
+
+    .advice-image__row {
+        display: flex;
+        justify-content: center;
+        margin-top:10px;
+        .advice-image__col {
+            height: 180px;
+            border-radius: 10px;
+        }
+    }
+    .advice-lvl__row{
+        display: flex;
+        justify-content: center;
+        .advice-lvl__col {
+            display: flex;
+            justify-content: flex-start;
+            span {
+                color: #eeeeee;
+                font-family: $main-font;
+                font-size: 14px;
+            }
+        }
+    }   
+
+    .advice-info__row {
+        display: flex;
+        justify-content: center;
+        .advice-info__col {
+            text-align: left;
+            span {
+                color: #eeeeee;
+                font-family: $main-font;
+                font-size:18px;
+                // text-align: left;
+            }
+        }
+    }
+    .advice-list__row {
+        display: flex;
+        justify-content: center;
+        .advice-list__col {
+            ul {
+                li {
+                    text-align: left;
+                    list-style: none;
+                    color: #eeeeee;
+                    font-family: $main-font;
+                    margin-top: 5px;
+                    font-size:15px;
+                }
+            }
+        }
+    }
+
+    .advice1-iamge__col {
+        background-image: url(../../src/images/zasady_ruchu_drog.jpg);
+    }
+    .advice2-image__col {
+        background-image: url(../../src/images/znaki.jpg);
+    }
+    .advice3-image__col {
+        background-image: url(../../src/images/techniki_hamowania.jpg);
+    }
+    .advice4-image__col {
+        background-image: url(../../src/images/bezpieczna_jazda.jpg);
+    }
+    .advice5-image__col {
+        background-image: url(../../src/images/prowad_na_zakr.jpg);
+    }
 
 }

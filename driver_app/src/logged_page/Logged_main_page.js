@@ -4,6 +4,7 @@ import Name from './Name';
 import {connect} from 'react-redux';
 import LoggedAdvices from './Logged_advices';
 import LoggedQuiz from './Logged_quiz';
+import WeeklyAdvice from './Weekly_advice';
 
 
 
@@ -24,11 +25,11 @@ class LoggedMainPage extends Component {
         });
     }
     
-    handlePage1 = () => {
+    handlePage1 = (event) => {
         this.setState({
             page: 1,
         })
-        
+        // console.log()
     }
     handlePage2 = () => {
         this.setState({
@@ -45,7 +46,7 @@ class LoggedMainPage extends Component {
         const { accounts } = this.props;
         const name = accounts.map(name => name.name);
         let page;
-        let style;
+
         if(this.state.page == 1) {
             page = <LoggedAdvices/>;
         } else if (this.state.page == 2) {
@@ -70,30 +71,17 @@ class LoggedMainPage extends Component {
                     <div className="col-3 ">
                     </div>
                 </div>
-                <div className="row weekly-advice__row">
-                    <div className="col-9 weekly-advice__col">
-                        <div className="row">
-                            <div className="col-5">
-                                <h3>Porada tygodnia</h3>
-                            </div>
-                        </div>
-                        <div className="row">
-                            <div className="col-6">
-                                <h2>Prowadzenie na zakrętach</h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <WeeklyAdvice />
 
                 <nav className="row nav-row">
                     <div className="col-9 nav-col">
-                        <div className="col-3" onClick={this.handlePage1}>
+                        <div className="col-3" onClick={this.handlePage1}  >
                             <span>Porady</span>
                         </div>
-                        <div className="col-3" onClick={this.handlePage2}>
+                        <div className="col-3" onClick={this.handlePage2}  >
                             <span>Quiz</span>
                         </div>
-                        <div className="col-3" onClick={this.handlePage3}>
+                        <div className="col-3" onClick={this.handlePage3} >
                             <span>FAQ</span>
                         </div>
                     </div>
