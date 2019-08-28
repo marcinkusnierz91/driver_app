@@ -5,11 +5,7 @@ import {connect} from 'react-redux';
 import LoggedAdvices from './Logged_advices';
 import LoggedQuiz from './Logged_quiz';
 import WeeklyAdvice from './Weekly_advice';
-
-
-
-
-
+import Test from './Logged_FAQ';
 
 
 class LoggedMainPage extends Component {
@@ -29,7 +25,7 @@ class LoggedMainPage extends Component {
         this.setState({
             page: 1,
         })
-        // console.log()
+        
     }
     handlePage2 = () => {
         this.setState({
@@ -52,7 +48,7 @@ class LoggedMainPage extends Component {
         } else if (this.state.page == 2) {
             page = <LoggedQuiz/>
         } else if (this.state.page == 3) {
-            page = null
+            page = <Test/>
         }
 
         return (
@@ -92,6 +88,7 @@ class LoggedMainPage extends Component {
                 
                 
                 
+                
             </section>
         )
     }
@@ -100,7 +97,8 @@ class LoggedMainPage extends Component {
 
 const mapStateToProps = (state) => {
     return {
-      accounts: state.accounts
+      accounts: state.accounts,
+      advices: state.advices
     }
   }
 
