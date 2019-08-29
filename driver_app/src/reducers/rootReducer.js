@@ -27,7 +27,7 @@ const initState = {
         {id: '5', question: 'Jak zmieniły się przepisy dotyczące przeglądu samochodowego względem zeszłego roku?', answer: 'Najpoważniejszą zmianą wprowadzoną w ubiegłym roku jest to, że za przegląd płaci się z góry .'},
         {id: '6', question: 'Jak często muszę dolewać olej silnikowy ?', answer: 'Najlepiej sprawdzać samemu poziom oleju silnikowego co jakieś okres. Jeśli jest wyciek nalży dolać, po czym udać się do mechanika celem naprawy.'},
         // {id: '7', question: 'Jak często muszę dolewać olej silnikowy ?', answer: 'Najlepiej sprawdzać samemu poziom oleju silnikowego co jakieś okres. Jeśli jest wyciek nalży dolać, po czym udać się do mechanika celem naprawy.'},
-    ]
+    ],
 
     quiz: [
         {
@@ -50,7 +50,7 @@ const initState = {
             answers: ['Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', ],
             correct: 2,
         },
-    ]
+    ],
 
 
 
