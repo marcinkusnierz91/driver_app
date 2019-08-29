@@ -4,23 +4,50 @@ import {connect} from 'react-redux';
 
 
 
+
 class LoggedFAQ extends Component {
+    state = {
+        search: '',
+    }
+    
+
+    updateChange = (event) => {
+        this.setState({
+            search: event.target.value.substr(0, 20),
+        })
+    }
+
     render() {
-        // const faqs = this.props;
-        console.log(this.props)
+
+        const filteredFaqs = this.props.faqs.filter(
+            (faq) => {
+                return (
+                faq.question.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 || 
+                faq.answer.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1 
+                )
+            }
+        );
+        
+        const commentsQuantity = this.props.faqs.map(element => {
+            return (element.id)
+        })
+        const commentsSum = commentsQuantity.reverse()[0]
+        
         return (
             <>
-            <div className="row faq-search__row">
-                <div className="col-5 faq-search__col">
-                    <ReactSearchBox 
-                    data= {this.faqs}
-                    inputBoxHeight='30px;'
-                    placeholder='Szukaj...'
-                    callback={record => console.log(record)}
-                    />
+            <div className="row faq-summ-row">
+                <div className="col-9 faq-summ-col">
+                    <h3>Zadawane pytania ({commentsSum})</h3>
                 </div>
             </div>
-            {this.props.faqs.map(faq => {
+            <div className="row faq-search__row">
+                <div className="col-5 faq-search__col">
+                    
+                    <input placeholder='Szukaj...' type="text" value={this.state.search}  onChange={this.updateChange} className='searchInput'/>
+                </div>
+            </div>
+            
+            {filteredFaqs.map(faq => {
                 return ( 
                     <div className="row faq-row" key={faq.id}>
                         <div className="col-9 faq-col">
@@ -30,6 +57,7 @@ class LoggedFAQ extends Component {
                     </div>
                 ) 
             })}
+            
             </>
         )
     }

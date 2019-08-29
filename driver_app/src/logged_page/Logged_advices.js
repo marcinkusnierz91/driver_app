@@ -42,7 +42,7 @@ class LoggedAdvices extends Component {
                         
                             <h3>Bezpieczna jazda</h3>
                             <h5>początkujący</h5>
-                        
+                            
                     </Link>
                     </div>
                     

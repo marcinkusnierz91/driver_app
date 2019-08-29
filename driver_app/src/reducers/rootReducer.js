@@ -21,13 +21,35 @@ const initState = {
 
     faqs: [
         {id: '1', question: 'Jaka jutro pogoda?', answer: 'Znów upały'},
-        {id: '2', question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure rem omnis.', answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum ex exercitationem quod sequi consectetur veniam, repellendus velit, itaque, fugit saepe sit minus. Molestias.'},
-        {id: '3', question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure rem omnis.', answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum ex exercitationem quod sequi consectetur veniam, repellendus velit, itaque, fugit saepe sit minus. Molestias.'},
-        {id: '4', question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure rem omnis.', answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum ex exercitationem quod sequi consectetur veniam, repellendus velit, itaque, fugit saepe sit minus. Molestias.'},
-        {id: '5', question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure rem omnis.', answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum ex exercitationem quod sequi consectetur veniam, repellendus velit, itaque, fugit saepe sit minus. Molestias.'},
-        {id: '6', question: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iure rem omnis.', answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt earum ex exercitationem quod sequi consectetur veniam, repellendus velit, itaque, fugit saepe sit minus. Molestias.'},
+        {id: '2', question: 'Czy znaki pionowe sę ważniejsze od poziomych?', answer: 'Nie mam pojęcia'},
+        {id: '3', question: 'Ile zezwyczej zajmuje wymiana koła w samochodzie?', answer: 'Zazwyczaj koło 20 - 30minut.'},
+        {id: '4', question: 'Jakie są zalety hamowania silnikiem?', answer: 'Hamując silnikiem nie zużywamy paliwa, w przeciwieństwie do jazdy na luzie bez wrzuconego biegu.'},
+        {id: '5', question: 'Jak zmieniły się przepisy dotyczące przeglądu samochodowego względem zeszłego roku?', answer: 'Najpoważniejszą zmianą wprowadzoną w ubiegłym roku jest to, że za przegląd płaci się z góry .'},
+        {id: '6', question: 'Jak często muszę dolewać olej silnikowy ?', answer: 'Najlepiej sprawdzać samemu poziom oleju silnikowego co jakieś okres. Jeśli jest wyciek nalży dolać, po czym udać się do mechanika celem naprawy.'},
+        // {id: '7', question: 'Jak często muszę dolewać olej silnikowy ?', answer: 'Najlepiej sprawdzać samemu poziom oleju silnikowego co jakieś okres. Jeśli jest wyciek nalży dolać, po czym udać się do mechanika celem naprawy.'},
+    ]
 
-
+    quiz: [
+        {
+            question: 'Lorem ipsum dolor sit amet?', 
+            answers: ['Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', ],
+            correct: 3,
+        },
+        {
+            question: 'Lorem ipsum dolor sit amet?', 
+            answers: ['Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', ],
+            correct: 1,
+        },
+        {
+            question: 'Lorem ipsum dolor sit amet?', 
+            answers: ['Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', ],
+            correct: 4,
+        },
+        {
+            question: 'Lorem ipsum dolor sit amet?', 
+            answers: ['Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', ],
+            correct: 2,
+        },
     ]
 
 
