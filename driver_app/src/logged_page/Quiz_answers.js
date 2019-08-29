@@ -8,14 +8,14 @@ class QuizAnswers extends Component {
 
     }
 
-    checkAnswer = (event) => {
+    // checkAnswer = (event) => {
 
 
-        if(!isAnswered) {
+    //     if(!isAnswered) {
 
-        }
+    //     }
 
-    }
+    // }
 
 }
 

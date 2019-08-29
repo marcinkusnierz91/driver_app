@@ -76,7 +76,7 @@ class LoggedQuiz extends Component {
                         <h2>Praca w toku...</h2>
                     </div>
                 </div>
-
+                
             </>
            
 
