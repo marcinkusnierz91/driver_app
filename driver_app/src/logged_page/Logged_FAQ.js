@@ -35,8 +35,8 @@ class LoggedFAQ extends Component {
         
         return (
             <>
-            <div className="row faq-summ-row">
-                <div className="col-9 faq-summ-col">
+            <div className="row faq-sum-row">
+                <div className="col-9 faq-sum-col">
                     <h3>Zadawane pytania ({commentsSum})</h3>
                 </div>
             </div>

@@ -1,88 +1,53 @@
 import React, {Component} from 'react';
-import { totalmem } from 'os';
 import {connect} from 'react-redux';
-import { NONAME } from 'dns';
+import QuestionBox from './Question_box';
+
 
 class LoggedQuiz extends Component {
     state = {
-        nr: 0,
-        total: this.props.quiz.length,
-        showBtn: false,
-        questionAnswered: false,
         score: 0,
-        displayPopup: 'flex'
-        
+        responses: 0,
     }
 
-    pushData = (nr) => {
-        let {quiz} = this.props
-        this.setState({
-            question: quiz[nr].question,
-            answers: [quiz[nr].answers[0], quiz[nr].answers[1],quiz[nr].answers[2],quiz[nr].answers[3] ],
-            correct: quiz[nr].correct,
-            nr: this.state.nr + 1
-        })
-        
-    }
-
-    componentWillMount() {
-        let { nr } = this.state;
-        this.pushData(nr);
-    }
-    
-    nextQuestion = () => {
-        let {nr, total, score} = this.state;
-        if (nr === total) {
+    computeAnswer = (answer, correctAnswer) => {
+        if (answer === correctAnswer) {
             this.setState({
-                displayPopup: 'flex'
-            })
-        } else {
-            this.pushData(nr);
-            this.setState({
-                showBtn: false,
-                questionAnswered: false,
-            })
+                score: this.state.score + 1
+            });
         }
-    }
-
-    handleShowBtn = () => {
         this.setState({
-            showButton: true,
-            questionAnswered: true,
+            responses: this.state.responses < 5 ? this.state.responses + 1 : 5 
         })
     }
-
-    handleQuizStart = () => {
-        this.setState({
-            displayPopup: 'none',
-            nr: 1,
-        })
-    }
-
-    handleIncreaseScore = () => {
-        this.setState({
-            score: this.state.score + 1
-        })
-    }
-
     
     render() {
-        let {nr, total, showBtn, questionAnswered, score, displayPopup} = this.state;
+        // console.log(this.props.quiz)
         return (
 
-            <>
-                <div className="row quiz-row">
-                    <div className="col-9 quiz-col">
-                        <h2>Praca w toku...</h2>
-                    </div>
+            
+            <div className="row quiz-row">
+                <div className="col-9 quiz-col">
+                    {this.props.quiz.length > 0 &&
+                    this.state.responses < 5 && 
+                    this.props.quiz.map(({question, answers, correct, questionId}) => {
+                    return (
+                        <QuestionBox question={question}
+                        options={answers}
+                        key={questionId}
+                        selected={answer => this.computeAnswer(answer, correct)}/>
+                        
+                    )
+                    })}
                 </div>
-                
-            </>
-           
+            </div>
+            
+            
 
         )
     }
 }
+
+
 
 
 const mapStateToProps = (state) => {

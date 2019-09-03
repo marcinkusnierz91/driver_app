@@ -31,24 +31,34 @@ const initState = {
 
     quiz: [
         {
-            question: 'Lorem ipsum dolor sit amet?', 
-            answers: ['Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', ],
-            correct: 3,
+            question: 'Ile jest znaków zakazu ?', 
+            answers: ['108', '46', '54', '12', ],
+            correct: '46',
+            questionId: '1'
         },
         {
-            question: 'Lorem ipsum dolor sit amet?', 
-            answers: ['Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', ],
-            correct: 1,
+            question: 'Co oznacza znak na którym widnieje opona ?', 
+            answers: ['Sprzedaż opon', 'Hotel', 'Wulkanizacja', 'Motel', ],
+            correct: 'Wulkanizacja',
+            questionId: '2'
         },
         {
-            question: 'Lorem ipsum dolor sit amet?', 
-            answers: ['Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', ],
-            correct: 4,
+            question: 'Co oznacza mała tabliczka z napisem np. "49" ?', 
+            answers: ['Nr domu', 'Miejscowość', 'Ograniczenie prędkości', 'Numer drogi', ],
+            correct: 'Numer drogi',
+            questionId: '3'
         },
         {
-            question: 'Lorem ipsum dolor sit amet?', 
-            answers: ['Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', 'Lorem ipsum dolor sit amet.', ],
-            correct: 2,
+            question: 'Co oznacza znak na którym napisane jest "CŁO ZOOL" ?', 
+            answers: ['Kontrola celna', 'Strefa postoju', 'Zakaz ruchu', 'Kontrola skarbowa', ],
+            correct: 'Kontrola celna',
+            questionId: '4'
+        },
+        {
+            question: 'Co oznacza biały okrągły znak z czerwoną obwódką ?', 
+            answers: ['Pierwszeństwo przejazdu', 'Brak ograniczenia prędkości', 'Zakaz ruchu w obu kierunkach', 'Zakaz wjazdu', ],
+            correct: 'Zakaz ruchu w obu kierunkach',
+            questionId: '5'
         },
     ],
 

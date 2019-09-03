@@ -149,30 +149,30 @@
         }
     }
     
-    .quiz-row {
-        margin-top:20px;
-        display: flex;
-        justify-content: center;
-        .quiz-col {
-            background:linear-gradient(
-                rgba(0, 0, 0, 0.3), 
-                rgba(0, 0, 0, 0.3) ), 
-                url('../../src/images/prace.jpg');
-            background-size: cover;
-            height: 18em;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            h2 {
-                font-family: $main-font;
-                color: #eeeeee;
-                font-weight: 400;
-            }
+    // .quiz-row {
+    //     margin-top:20px;
+    //     display: flex;
+    //     justify-content: center;
+    //     .quiz-col {
+    //         background:linear-gradient(
+    //             rgba(0, 0, 0, 0.3), 
+    //             rgba(0, 0, 0, 0.3) ), 
+    //             url('../../src/images/prace.jpg');
+    //         background-size: cover;
+    //         height: 18em;
+    //         border-radius: 10px;
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         h2 {
+    //             font-family: $main-font;
+    //             color: #eeeeee;
+    //             font-weight: 400;
+    //         }
 
-        }
+    //     }
         
-    }
+    // }
 
     .advice-title__col {
         display: flex;
@@ -302,10 +302,10 @@
         }
     }
 
-    .faq-summ-row {
+    .faq-sum-row {
         display: flex;
         justify-content: center;
-        .faq-summ-col {
+        .faq-sum-col {
             h3 {
                 margin-top:10px;
                 color: grey;
@@ -314,6 +314,42 @@
             }
         }
     }
+    .quiz-row {
+        display: flex;
+        justify-content: center;
+        .quiz-col {
+            .question-row {
+                margin-top:10px;
+                .question-col {
+                    color: grey;
+                    font-family: $main-font;
+                    text-align: center;
+                }
+            }
+            .answer-row {
+                .answer-col {
+                    display: flex;
+                    flex-wrap: wrap;
+                    .answerBtn {
+                        color: #eeeeee;
+                        background-color: black;
+                        border: 2px solid #eeeeee;
+                        border-radius: 10px;
+                        margin:5px;
+                        font-family: $main-font;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        
+    }
+    
+
+    
+    
+    
+    
     
 
 }

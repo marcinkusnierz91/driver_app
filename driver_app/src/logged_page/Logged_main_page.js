@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import DriverLogo from '../login_page/Driver_logo';
-import Name from './Name';
+// import Name from './Name';
 import {connect} from 'react-redux';
 import LoggedAdvices from './Logged_advices';
 import LoggedQuiz from './Logged_quiz';
@@ -39,15 +39,15 @@ class LoggedMainPage extends Component {
     }
 
     render() {
-        const { accounts } = this.props;
-        const name = accounts.map(name => name.name);
+        // const { accounts } = this.props;
+        // const name = accounts.map(name => name.name);
         let page;
 
-        if(this.state.page == 1) {
+        if(this.state.page === 1) {
             page = <LoggedAdvices/>;
-        } else if (this.state.page == 2) {
+        } else if (this.state.page === 2) {
             page = <LoggedQuiz/>
-        } else if (this.state.page == 3) {
+        } else if (this.state.page === 3) {
             page = <Test/>
         }
 
