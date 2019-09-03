@@ -1,6 +1,10 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import QuestionBox from './Question_box';
+import Result from './Result';
+
+
+const bgColor = {grey: '#3F3E42'}
 
 
 class LoggedQuiz extends Component {
@@ -19,9 +23,18 @@ class LoggedQuiz extends Component {
             responses: this.state.responses < 5 ? this.state.responses + 1 : 5 
         })
     }
+
+    playAgain = () => {
+        this.setState({
+            score: 0,
+            responses: 0,
+        })
+    }
+    
     
     render() {
         // console.log(this.props.quiz)
+        
         return (
 
             
@@ -38,6 +51,11 @@ class LoggedQuiz extends Component {
                         
                     )
                     })}
+                    
+                    {this.state.responses === 5 ? (
+                        <Result score={this.state.score} playAgain={this.playAgain}/>
+                    ) : null}
+                        
                 </div>
             </div>
             

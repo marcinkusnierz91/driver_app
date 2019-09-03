@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 
 
-const QuestionBox = ({question, options}) => {
-    const [answer, setAnswer, selected] = useState(options)
-    console.log(answer, setAnswer, selected);
+const QuestionBox = ({question, options, selected}) => {
+    const [answer, setAnswer] = useState(options)
+    // console.log(answer, setAnswer, selected);
     
     return (
         <div className="row question-row">
@@ -17,7 +17,7 @@ const QuestionBox = ({question, options}) => {
                     return (
                         <button  key={index} className='col-4 answerBtn' onClick={() => {
                             setAnswer([text]);
-                            // selected(text);
+                            selected(text);
                         }}>{text}</button>
                     )
                     })}

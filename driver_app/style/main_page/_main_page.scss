@@ -342,6 +342,37 @@
                 }
             }
         }
+
+        .result-row {
+            .result-col {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                height: 200px;
+                margin-top: 50px;
+                border: 2px solid #3F3E42;
+                border-radius: 10px;
+
+                h2 {
+                    color: #3F3E42;
+                    font-family: $main-font;
+                    font-weight: 400;
+                }
+
+                .playBtn {
+                    color: #eeeeee;
+                    background-color: black;
+                    border: 2px solid #eeeeee;
+                    border-radius: 10px;
+                    margin:5px;
+                    font-family: $main-font;
+                    font-size: 12px;
+                    width: 130px;
+                    height: 30px;
+                }
+            }
+        }
         
     }
     
