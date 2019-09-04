@@ -4,13 +4,14 @@ import QuestionBox from './Question_box';
 import Result from './Result';
 
 
-const bgColor = {grey: '#3F3E42'}
+
 
 
 class LoggedQuiz extends Component {
     state = {
         score: 0,
         responses: 0,
+        questions: this.props.quiz
     }
 
     computeAnswer = (answer, correctAnswer) => {
@@ -29,11 +30,13 @@ class LoggedQuiz extends Component {
             score: 0,
             responses: 0,
         })
+        // this.props.quiz.sort(() => 0.5 - Math.random()).slice(0,5);
     }
     
     
     render() {
         // console.log(this.props.quiz)
+        // let quizQuestions = this.props.quiz.sort(() => 0.5 - Math.random()).slice(0,5);
         
         return (
 
@@ -70,7 +73,7 @@ class LoggedQuiz extends Component {
 
 const mapStateToProps = (state) => {
     return {
-      quiz: state.quiz,
+      quiz: state.quiz.slice(0,5),
     }
   }
 

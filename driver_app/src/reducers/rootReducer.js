@@ -60,6 +60,66 @@ const initState = {
             correct: 'Zakaz ruchu w obu kierunkach',
             questionId: '5'
         },
+        {
+            question: 'Co oznacza biały okrągły znak z czerwoną obwódką ?', 
+            answers: ['Pierwszeństwo przejazdu', 'Brak ograniczenia prędkości', 'Zakaz ruchu w obu kierunkach', 'Zakaz wjazdu', ],
+            correct: 'Zakaz ruchu w obu kierunkach',
+            questionId: '6'
+        },
+        {
+            question: 'Co oznacza biały okrągły znak z czerwoną obwódką ?', 
+            answers: ['Pierwszeństwo przejazdu', 'Brak ograniczenia prędkości', 'Zakaz ruchu w obu kierunkach', 'Zakaz wjazdu', ],
+            correct: 'Zakaz ruchu w obu kierunkach',
+            questionId: '7'
+        },
+        {
+            question: 'Co oznacza biały okrągły znak z czerwoną obwódką ?', 
+            answers: ['Pierwszeństwo przejazdu', 'Brak ograniczenia prędkości', 'Zakaz ruchu w obu kierunkach', 'Zakaz wjazdu', ],
+            correct: 'Zakaz ruchu w obu kierunkach',
+            questionId: '8'
+        },
+        {
+            question: 'Co oznacza biały okrągły znak z czerwoną obwódką ?', 
+            answers: ['Pierwszeństwo przejazdu', 'Brak ograniczenia prędkości', 'Zakaz ruchu w obu kierunkach', 'Zakaz wjazdu', ],
+            correct: 'Zakaz ruchu w obu kierunkach',
+            questionId: '9'
+        },
+        {
+            question: 'Co oznacza biały okrągły znak z czerwoną obwódką ?', 
+            answers: ['Pierwszeństwo przejazdu', 'Brak ograniczenia prędkości', 'Zakaz ruchu w obu kierunkach', 'Zakaz wjazdu', ],
+            correct: 'Zakaz ruchu w obu kierunkach',
+            questionId: '10'
+        },
+        {
+            question: 'Co oznacza biały okrągły znak z czerwoną obwódką ?', 
+            answers: ['Pierwszeństwo przejazdu', 'Brak ograniczenia prędkości', 'Zakaz ruchu w obu kierunkach', 'Zakaz wjazdu', ],
+            correct: 'Zakaz ruchu w obu kierunkach',
+            questionId: '11'
+        },
+        {
+            question: 'Co oznacza biały okrągły znak z czerwoną obwódką ?', 
+            answers: ['Pierwszeństwo przejazdu', 'Brak ograniczenia prędkości', 'Zakaz ruchu w obu kierunkach', 'Zakaz wjazdu', ],
+            correct: 'Zakaz ruchu w obu kierunkach',
+            questionId: '12'
+        },
+        {
+            question: 'Co oznacza biały okrągły znak z czerwoną obwódką ?', 
+            answers: ['Pierwszeństwo przejazdu', 'Brak ograniczenia prędkości', 'Zakaz ruchu w obu kierunkach', 'Zakaz wjazdu', ],
+            correct: 'Zakaz ruchu w obu kierunkach',
+            questionId: '13'
+        },
+        {
+            question: 'Co oznacza biały okrągły znak z czerwoną obwódką ?', 
+            answers: ['Pierwszeństwo przejazdu', 'Brak ograniczenia prędkości', 'Zakaz ruchu w obu kierunkach', 'Zakaz wjazdu', ],
+            correct: 'Zakaz ruchu w obu kierunkach',
+            questionId: '14'
+        },
+        {
+            question: 'Co oznacza biały okrągły znak z czerwoną obwódką ?', 
+            answers: ['Pierwszeństwo przejazdu', 'Brak ograniczenia prędkości', 'Zakaz ruchu w obu kierunkach', 'Zakaz wjazdu', ],
+            correct: 'Zakaz ruchu w obu kierunkach',
+            questionId: '15'
+        },
     ],
 
 

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 
 const QuestionBox = ({question, options, selected}) => {
-    const [answer, setAnswer] = useState(options)
+    const [answer, setAnswer, setStyle] = useState(options)
     // console.log(answer, setAnswer, selected);
     
     return (
@@ -15,7 +15,7 @@ const QuestionBox = ({question, options, selected}) => {
                 <div className="col-9 answer-col">
                     {answer.map((text, index) => {
                     return (
-                        <button  key={index} className='col-4 answerBtn' onClick={() => {
+                        <button key={index} className='col-4 answerBtn' onClick={() => {
                             setAnswer([text]);
                             selected(text);
                         }}>{text}</button>

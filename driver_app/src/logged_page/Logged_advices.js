@@ -47,6 +47,38 @@ class LoggedAdvices extends Component {
                     </div>
                     
                 </div>
+
+                <div className="row advices-row">
+                
+                    <div className="col-9 advices-col">
+                        
+                    <Link to='#' className='col-4 advice' style={{backgroundImage: 'none'}}>
+                        
+                            <h3>Lorem</h3>
+                            <h5>Lorem ipsum</h5>
+                        
+                    </Link>
+                    <Link to='#' className="col-4 advice" style={{backgroundImage: 'none'}}>
+                        
+                            <h3>Lorem</h3>
+                            <h5>Lorem ipsum</h5>
+                        
+                    </Link>
+                    <Link to='#' className="col-4 advice" style={{backgroundImage: 'none'}}>
+                        
+                            <h3>Lorem</h3>
+                            <h5>Lorem ipsum</h5>
+                        
+                    </Link>
+                    <Link to='#' className="col-4 advice" style={{backgroundImage: 'none'}}>
+                        
+                            <h3>Lorem</h3>
+                            <h5>Lorem ipsum</h5>
+                            
+                    </Link>
+                    </div>
+                    
+                </div>
                 </ReactSwipe>
 
         )

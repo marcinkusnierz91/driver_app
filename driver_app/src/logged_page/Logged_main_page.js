@@ -42,7 +42,7 @@ class LoggedMainPage extends Component {
         // const { accounts } = this.props;
         // const name = accounts.map(name => name.name);
         let page;
-
+        let style;
         if(this.state.page === 1) {
             page = <LoggedAdvices/>;
         } else if (this.state.page === 2) {
